@@ -87,7 +87,7 @@ class ChatRequest(BaseModel):
 
 
 # ── Base de datos ─────────────────────────────────────────
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./db.sqlite")
 engine = create_engine(DATABASE_URL)
 
 
